@@ -4,13 +4,11 @@
 
 # Bibliotheken_Implementierung
 import os, random, time, threading, win32api, win32con, win32console, win32gui, win32clipboard
-import multiprocessing as mp
 import tkinter as tk
 import tkinter.ttk as ttk
 from tkinter import messagebox
 
 # Globaler_Variablen_Bereich
-Anzahl_Prozessoren = mp.cpu_count()
 ID_CMD = win32console.GetConsoleWindow()
 Passwort = ""
 Programm_Beenden = 0
@@ -42,7 +40,7 @@ def GUI():
 	win32gui.ShowWindow(ID_CMD, win32con.SW_HIDE)
 
 	# Main_Bereich
-	mainWindow = tk.Tk(className=' M U L T I F U N K T I O N S - T O O L (Vorab nur Passwort-Generator)')
+	mainWindow = tk.Tk(className=' P A S S W O R T - G E N E R A T O R')
 	mainWindow.geometry('800x320+'+str(Position_X)+'+'+str(Position_Y))
 	mainWindow.configure(bg='DimGray')
 
